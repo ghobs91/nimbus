@@ -6,7 +6,7 @@ import SunIcon from '../../assets/sun.svg';
 import styles from './ThemeToggle.module.scss';
 
 export default function ThemeToggle(props: {}) {
-    const localStorageTheme = store.get("theme") || "light";
+    const localStorageTheme = store.get("theme") || "dark";
     const [isDark, setIsDark] = useState(localStorageTheme == "dark");
     const [className, setClassName] = useState("");
 
@@ -14,7 +14,7 @@ export default function ThemeToggle(props: {}) {
         e.preventDefault();
 
         setClassName(cn({ [styles.dark]: isDark ? false : true }));
-        store.set("theme", "dark");
+        store.set("theme", isDark ? "light" : "dark");
         document.body.classList.remove("light");
         document.body.classList.remove("dark");
         document.body.classList.add(isDark ? "light" : "dark");

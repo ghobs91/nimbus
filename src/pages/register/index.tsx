@@ -22,9 +22,9 @@ export default function Register(props: {}) {
     const [advanced, setAdvanced] = useState(false);
 
     useEffect(() => {
-        if (theme == 'dark') {
+        // if (theme == 'dark') {
             document.body.classList.add('dark');
-        }
+        // }
     }, []);
 
     const _handleSubmit = async (e: FormEvent) => {

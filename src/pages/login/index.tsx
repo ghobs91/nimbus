@@ -22,9 +22,9 @@ export default function Login(props: {}) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (theme == 'dark') {
+        // if (theme == 'dark') {
             document.body.classList.add('dark');
-        }
+        // }
     }, []);
 
     const _handleSubmit = async (e: FormEvent) => {
