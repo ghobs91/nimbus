@@ -11,6 +11,8 @@ import Loading from '../../components/Loading';
 import PostsRenderer from '../../components/PostsRenderer';
 import { UI_STORAGE_KEY, uiAtom } from '../../store/ui';
 import styles from './Feed.module.scss';
+import HomeIcon from '../../assets/home.svg';
+import New from './New';
 
 export default function SkyCol(props: {}) {
     const page = useRef<any>(null);
@@ -118,15 +120,26 @@ export default function SkyCol(props: {}) {
         localStorage.setItem(UI_STORAGE_KEY, JSON.stringify({ ...ui, hot: false }));
     };
 
+    const _handleHot = (e: SyntheticEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        setUi(prev => ({ ...prev, hot: false }));
+        localStorage.setItem(UI_STORAGE_KEY, JSON.stringify({ ...ui, hot: false }));
+    };
+
     return (
-        <div ref={colRef} className="skyline skycol">
+        <div ref={colRef} className="skyline">
             {newPosts.length ? <button onClick={_handleNewPostsClick} className={cn("btn primary", styles.newPosts)}>New Posts</button> : ''}
             <div className="col-header">
                 <h1>What's Hot?</h1>
-                <button className="icon-btn" onClick={_handleClose}>
-                    <img src={CloseIcon} alt="Close" />
-                </button>
+                <div>
+                        <button className="header-btn" onClick={_handleHot}>
+                            <span>Home</span><img src={HomeIcon} className='home-toggle-icon' alt="Home Column" />
+                        </button>
+                </div>
             </div>
+            <New />
             <PostsRenderer isLoading={isLoading} feed={feed} />
             {hasNextPage ? <div className="d-flex align-items-center justify-content-center p-5"><Loading isColored /></div> : ''}
         </div>

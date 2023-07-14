@@ -276,7 +276,7 @@ body {
 
 body.hot-col .skyline:not(.skycol) {
     @media screen and (max-width: 1040px) {
-        width: 95%;
+        width: 100%;
         flex: 0 0 auto;
     }
 }
@@ -937,4 +937,8 @@ button {
     float: left;
     height: 0;
     pointer-events: none;
+}
+
+.home-toggle-icon {
+    top: 0 !important;
 }

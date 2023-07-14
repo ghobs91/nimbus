@@ -30,9 +30,9 @@ export default function Feed(props: {}) {
 
     return (
         <Layout className='home'>
-            <Skyline />
+            {!ui.hot ? <Skyline /> : ''}
             {ui.hot ? <SkyCol /> : ''}
-            {ui.firehose ? <Firehose /> : ''}
+            {/* {ui.firehose ? <Firehose /> : ''} */}
         </Layout>
     );
 }

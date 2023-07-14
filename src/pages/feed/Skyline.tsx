@@ -222,16 +222,12 @@ export default function Skyline(props: {}) {
                 {window.innerWidth < 1024 ?
                     <>
                         <img src={KiteIcon} height={32} alt="" />
-                        <h1 onClick={_scrollToTop}>Kite</h1>
-                    </> : <h1>Skyline</h1>}
+                        <h1 onClick={_scrollToTop}>Home</h1>
+                    </> : <h1>Home</h1>}
                 <div>
                     {!ui.hot ?
                         <button className="header-btn" onClick={_handleHot}>
-                            <span>Hot</span><img src={HotIcon} alt="Hot Column" />
-                        </button> : ''}
-                    {!ui.firehose ?
-                        <button className="header-btn" onClick={_handleFirehose}>
-                            <span>RealTime</span><img src={FirehoseIcon} alt="Firehose Column" />
+                            <span>What's Hot</span><img src={HotIcon} alt="Hot Column" />
                         </button> : ''}
                 </div>
             </div>
