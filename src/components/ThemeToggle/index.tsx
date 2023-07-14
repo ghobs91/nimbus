@@ -14,7 +14,7 @@ export default function ThemeToggle(props: {}) {
         e.preventDefault();
 
         setClassName(cn({ [styles.dark]: isDark ? false : true }));
-        store.set("theme", isDark ? "light" : "dark");
+        store.set("theme", "dark");
         document.body.classList.remove("light");
         document.body.classList.remove("dark");
         document.body.classList.add(isDark ? "light" : "dark");
