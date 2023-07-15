@@ -124,7 +124,7 @@ export default function More(props: {
                             : ''}
                         <p className="font-weight-bold" onClick={_handleCopyKiteUrl}>
                             <img src={CopyIcon} alt="Copy" />
-                            <span>Copy Kite URL</span>
+                            <span>Copy Volari URL</span>
                         </p>
                         <p className="font-weight-bold" onClick={_handleCopyBskyUrl}>
                             <img src={CopyIcon} alt="Copy" />

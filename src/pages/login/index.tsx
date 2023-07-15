@@ -64,7 +64,7 @@ export default function Login(props: {}) {
         <div className="login-page">
 
             <div className="login-page__left">
-                <img src={KiteLogo} alt="Kite | A Better BlueSky Client" />
+                <img src={KiteLogo} alt="Volari | A Better BlueSky Client" />
                 <h1>Kite</h1>
                 <h2>Better BlueSky Client</h2>
                 <form onSubmit={_handleSubmit}>
@@ -83,8 +83,8 @@ export default function Login(props: {}) {
                     <Button text="Login" className="btn" loading={form.loading} />
                     <Button onClick={() => navigate('/register')} text="Register" className="btn outline" />
                     {form.error ? <p className="error text-center">{form.error}</p> : ''}
-                    <p>Kite is an <a href="https://github.com/callmearta/kite" className="font-weight-bold" title="Kite | A Bluesky Web Client" target="_blank">open-source</a> web app developed by @arta.bsky.social</p>
-                    <p>There's no credentials or personal data being sent to any other server than the official Bluesky server. But it's still recommended to use Kite with <a href="https://github.com/bluesky-social/atproto-ecosystem/blob/main/app-passwords.md" title="App Passwords" target="_blank" className="font-weight-bold">App Passwords</a>. Only data collected is by using Google Analytics to keep track of Kite's user count.</p>
+                    <p>Volari is an <a href="https://github.com/callmearta/kite" className="font-weight-bold" title="Volari | A Bluesky Web Client" target="_blank">open-source</a> web app developed by @arta.bsky.social</p>
+                    <p>There's no credentials or personal data being sent to any other server than the official Bluesky server. But it's still recommended to use Volari with <a href="https://github.com/bluesky-social/atproto-ecosystem/blob/main/app-passwords.md" title="App Passwords" target="_blank" className="font-weight-bold">App Passwords</a>. Only data collected is by using Google Analytics to keep track of Kite's user count.</p>
                 </form>
             </div>
             <div className="login-page__right">

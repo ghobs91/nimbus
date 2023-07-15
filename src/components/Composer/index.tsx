@@ -541,7 +541,7 @@ export default function Composer(props: {
                             </label>
                         </div>
                         <Audio setAudio={setAudio} />
-                        <Button type="submit" loading={submitLoading || fileUploadLoading} className={cn("btn primary", { disabled: richtext.graphemeLength > 300 })} text='Post' />
+                        <Button type="submit" loading={submitLoading || fileUploadLoading} className={cn("btn", { disabled: richtext.graphemeLength > 300 })} text='Post' />
                     </div>
                 </div>
             </form>

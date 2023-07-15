@@ -33,7 +33,7 @@ a.text-primary {
 :root {
     --stroke-color: #ececec;
     --text-color: #323232;
-    --primary-color: #111;
+    --primary-color: #FFF;
     --white-color: #FFF;
     --grey-color: #888;
     --light-color: #f4f4f4;
@@ -42,7 +42,7 @@ a.text-primary {
 body.dark {
     --stroke-color: #1a1a1a;
     --text-color: #ebebeb;
-    --primary-color: #111;
+    --primary-color: #FFF;
     --white-color: #010101;
     --grey-color: #888;
     --light-color: #181818;
@@ -941,4 +941,13 @@ button {
 
 .home-toggle-icon {
     top: 0 !important;
+}
+
+.post-header-container {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.avatar-style {
+    margin-right: 15px;
 }

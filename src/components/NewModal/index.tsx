@@ -104,7 +104,7 @@ export default function NewModal(props: {}) {
         if (audio) {
             // @ts-ignore
             data.kiteAudio = audio;
-            const newRt = new RichText({ text: 'Unsupported audio message. To view this message you need to use Kite 🪁\n\nhttps://kite.black' });
+            const newRt = new RichText({ text: 'Unsupported audio message. To view this message you need to use Volari 🪁\n\nhttps://kite.black' });
             await newRt.detectFacets(agent);
             data.text = newRt.text;
             data.facets = newRt.facets;

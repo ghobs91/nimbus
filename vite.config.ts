@@ -7,7 +7,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
   manifest: {
     name: "Kite",
     short_name: "Kite",
-    description: "Kite | A Better Bluesky Web Client",
+    description: "Volari | A Better Bluesky Web Client",
     theme_color: "#111",
     icons: [
       {

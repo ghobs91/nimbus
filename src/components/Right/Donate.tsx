@@ -27,7 +27,7 @@ export default function Donate(props: {}) {
                     <div className="modal-backdrop" onClick={_handleCloseModal}></div>
                     <div className="modal-content">
                         <h1>🪙 Donation</h1>
-                        <p>Developing Kite takes quite some time from my daily life so I'd really appreciate any help if you'd like to support a passionate developer :) </p>
+                        <p>Developing Volari takes quite some time from my daily life so I'd really appreciate any help if you'd like to support a passionate developer :) </p>
                         <div className="donation-uri">
                             <strong>Etherium: </strong>
                             <span>0x50Eb77506a540B9e7242F8601075bDCa41f55B09</span>

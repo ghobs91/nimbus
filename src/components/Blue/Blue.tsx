@@ -136,16 +136,18 @@ export default function Blue(props: {
                             <span>Pinned Post</span>
                         </div>
                         : ''}
-                    <div className={styles.avatar} onClick={_linkToUserProfile} onMouseDown={_linkToUserProfile}>
-                        <img src={author.avatar || AvatarPlaceholder as any} />
-                    </div>
                     <div className={styles.body}>
-                        <div className={styles.header}>
-                            <div>
-                                <strong onClick={_linkToUserProfile}>{author.displayName}</strong>
-                                <span onClick={_linkToUserProfile}>@{(author.handle as string)}</span>
+                        <div className="post-header-container">
+                            <div className={cn("avatar-style", styles.avatar)} onClick={_linkToUserProfile} onMouseDown={_linkToUserProfile}>
+                                <img src={author.avatar || AvatarPlaceholder as any} />
                             </div>
-                            {post.indexedAt ? <span>{fromNow(new Date((post.indexedAt as string)))}</span> : ''}
+                            <div className={styles.header}>
+                                <div>
+                                    <strong onClick={_linkToUserProfile}>{author.displayName}</strong>
+                                    <span onClick={_linkToUserProfile}>@{(author.handle as string)}</span>
+                                </div>
+                                {post.indexedAt ? <span>{fromNow(new Date((post.indexedAt as string)))}</span> : ''}
+                            </div>
                         </div>
                         <div dir="auto" style={{ whiteSpace: 'pre-wrap' }}>
                             {/* <p dir="auto"> */}
