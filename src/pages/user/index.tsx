@@ -142,7 +142,7 @@ export default function User(props: {}) {
                                                 :
                                                 user?.viewer?.following ?
                                                     <Button className="btn" text="Unfollow" loading={unfollowLoading} loadingColored onClick={_handleUnfollow} />
-                                                    : <Button className="btn primary" text="Follow" loading={followLoading} onClick={_handleFollow} />
+                                                    : <Button className="btn" text="Follow" loading={followLoading} onClick={_handleFollow} />
                                         }
                                         {user.viewer.blocking ? '' : <More refetch={refetch} user={user} me={me} />}
                                     </div>}

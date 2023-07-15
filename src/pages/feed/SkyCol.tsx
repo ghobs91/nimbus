@@ -130,7 +130,7 @@ export default function SkyCol(props: {}) {
 
     return (
         <div ref={colRef} className="skyline">
-            {newPosts.length ? <button onClick={_handleNewPostsClick} className={cn("btn primary", styles.newPosts)}>New Posts</button> : ''}
+            {newPosts.length ? <button onClick={_handleNewPostsClick} className={cn("btn", styles.newPosts)}>New Posts</button> : ''}
             <div className="col-header">
                 <h1>What's Hot?</h1>
                 <div>

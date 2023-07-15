@@ -128,7 +128,7 @@ export default function EditProfile(props: {
                                 <label>Bio:</label>
                                 <textarea value={form.description} onChange={e => setForm(prev => ({ ...prev, description: e.target.value }))} placeholder="A short bio about you"></textarea>
                             </div>
-                            <Button className="btn primary" text="Change" loading={isLoading} onClick={_handleSubmit} />
+                            <Button className="btn" text="Change" loading={isLoading} onClick={_handleSubmit} />
                         </form>
                     </div>
                 </div>
